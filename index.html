@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Static Template</title>
+    <meta charset="UTF-8" />
+    <title>Speech Detection</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>This is a static template, there is no bundler or bundling involved!</h1>
+    <div class="header">
+      <button id="record">RECORD</button><button id="playback">PLAYBACK</button>
+      <div class="voiceinator">
+        <select name="voice" id="voices">
+          <option value="">Select A Voice</option>
+        </select>
+
+        <!-- <textarea name="text">Hello! I love JavaScript 👍</textarea> -->
+        <button id="stop">Stop!</button>
+        <button id="speak">Speak</button>
+      </div>
+    </div>
+    <div class="words" contenteditable></div>
+
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
