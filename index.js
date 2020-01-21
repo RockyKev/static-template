@@ -23,10 +23,6 @@ recognition.addEventListener("result", e => {
     p = document.createElement("p");
     words.appendChild(p);
   }
-
-  if (transcript.includes("unicorns")) {
-    console.log("UNICORNS");
-  }
 });
 
 const recButton = document.querySelector("#record");
@@ -53,7 +49,6 @@ function startRecording() {
 }
 
 /******* PLAYBACK ******/
-//uses rate, pitch, and text identifier in the dom
 const msg = new SpeechSynthesisUtterance();
 
 let voices = [];
@@ -98,9 +93,4 @@ voicesDropdown.addEventListener("change", setVoice);
 
 speakButton.addEventListener("click", playAudio);
 
-//You cannot pass a param in a eventlistener. Workarounds.
-// stopButton.addEventListener('click', toggle.bind(null, false));
-// stopButton.addEventListener('click', function() {
-//   toggle(false);
-// });
 stopButton.addEventListener("click", () => playAudio(false));
